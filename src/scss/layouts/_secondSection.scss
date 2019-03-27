@@ -1,11 +1,16 @@
 .secondSection {
   background-color: $blue;
   color: $white;
-
+  padding-bottom: 30px;
   .sectionContent {
     @include media-breakpoint-up(xl) {
       margin-top: 100px;
       max-width: 700px;
+    }
+
+    &>p:last-of-type {
+      margin: 20px auto 0;
+      width: 80%;
     }
 
     h3 {
@@ -20,6 +25,8 @@
       margin-bottom: 25px;
       font-weight: $bold-weight;
     }
+
+
 
     .feature-boxes {
 
@@ -54,8 +61,6 @@
         }
       }
     }
-
-
 
     .delivery-boxes {
       color: $black;
@@ -206,6 +211,7 @@
   }
 
   .form {
+    user-select: none;
     margin-top: 70px;
     margin-bottom: 70px;
     width: 85%;
@@ -214,7 +220,11 @@
     background-color: $white;
     border-radius: 5px;
     &>h3 {
+      font-size: 20px;
       font-weight: $bold-weight;
+    }
+    p {
+      margin-bottom: 30px;
     }
     @include media-breakpoint-up(md) {
       width: 664px;
@@ -232,6 +242,13 @@
 
     } 
     
+    .radioInputs {
+      .custom-control {
+        &:last-child {
+          margin-right: 114px;
+        }
+      }
+    }
 
     input {
       padding: 24px;
