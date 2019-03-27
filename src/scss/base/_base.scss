@@ -1,0 +1,12 @@
+body {
+  font-family: $base-font-family;
+  font-weight: $normal-weight;
+  min-height: 100vh;
+}
+
+
+@include media-breakpoint-up(xl) {
+  .container {
+    max-width: 1200px;
+  }
+}
