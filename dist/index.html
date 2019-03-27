@@ -7,6 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <!-- custom styles -->
   <link rel="stylesheet" href="css/styles.min.css">
   <title>Furgonetka.pl</title>
@@ -96,31 +99,34 @@
               <p>od 14,15 zł</p>
             </div>
           </div>
-          <p class="text-center">Pełny cennik dostępny jedynie po zarejestrowaniu lub zalogowaniu przez formularz
+          <p class="text-center">Pełny cennik dostępny jedynie <span>po <a href="#" class="pop">zarejestrowaniu</a> lub
+              <a href="#" class="pop">zalogowaniu</a></span> przez formularz
             dostępny na tej stronie.</p>
         </div>
         <form class="form d-flex flex-column">
-          <h3 class="text-center">Zaloguj się</h3>
+          <h3 class="text-center logIn">Zaloguj się</h3>
           <p class="text-center">i korzystaj z najtańszych usług</p>
 
-          <div class="radioInputs d-flex justify-content-between mb-4">
+          <div class="radioInputs d-flex justify-content-between align-items-center mb-4">
             <div class="custom-control custom-radio">
-                <input type="radio" id="newClient" name="customRadio" class="custom-control-input">
-                <label class="custom-control-label" for="newClient">Nowy klient</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="haveAccount" name="customRadio" class="custom-control-input">
-                <label class="custom-control-label" for="haveAccount">Mam konto</label>
-              </div>
+              <input type="radio" id="newClient" name="formRadio" value="New" class="custom-control-input">
+              <label class="custom-control-label" for="newClient">Nowy klient</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="haveAccount" name="formRadio" class="custom-control-input" value="Registered">
+              <label class="custom-control-label" for="haveAccount">Mam konto</label>
+            </div>
           </div>
+          <p class="newClient text-center text-info font-weight-bold">nowy klient</p>
           <div class="form-group inputEmail">
             <label for="email">Adres e-mail</label>
             <input type="email" class="form-control" id="email" placeholder="jan.kowalski@gmail.com">
           </div>
-          <div class="form-group">
+          <div class="form-group inputPassword">
             <input type="password" class="form-control" id="password" placeholder="Hasło">
             <small class="form-text text-muted">Użyj od 6 do 24 znaków. Nie używaj łatwych sekwencji, np.
               "123456".</small>
+            <i class="fas fa-eye"></i>
           </div>
           <div class="form-group inputCode">
             <label for="code">Kod rabatowy - 10%</label>
@@ -135,11 +141,12 @@
               wydarzeniach, materiałach, promocjach i ofertach specjalnych... <span>rozwiń pozostałą
                 treść</span></label>
           </div>
-          <button type="submit" class="btn btn-block">Zaloguj się</button>
+          <button type="submit" class="btn btn-block pulse-grow">Zaloguj się</button>
         </form>
       </div>
     </section>
   </main>
+  <script src="js/scripts.min.js"></script>
 </body>
 
 </html>
