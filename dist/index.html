@@ -97,20 +97,25 @@
             </div>
           </div>
         </div>
-        <form class="form">
-          <h3>Zaloguj się</h3>
-          <p>i korzystaj z najtańszych usług</p>
-          <div class="form-group">
+        <form class="form d-flex flex-column">
+          <h3 class="text-center">Zaloguj się</h3>
+          <p class="text-center">i korzystaj z najtańszych usług</p>
+          <div class="form-group inputEmail">
             <label for="email">Adres e-mail</label>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="jan.kowalski@gmail.com">
+            <input type="email" class="form-control" id="email" placeholder="jan.kowalski@gmail.com">
           </div>
           <div class="form-group">
             <input type="password" class="form-control" id="password" placeholder="Hasło">
-            <small id="emailHelp" class="form-text text-muted">Użyj od 6 do 24 znaków. Nie używaj łatwych sekwencji, np. "123456".</small>
+            <small class="form-text text-muted">Użyj od 6 do 24 znaków. Nie używaj łatwych sekwencji, np. "123456".</small>
           </div>
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">TAK, chcę być informowany/a e-mailowo o wydarzeniach, materiałach, promocjach i ofertach specjalnych... <span>rozwiń pozostałą treść</span></label>
+          <div class="form-group inputCode">
+            <label for="code">Kod rabatowy - 10%</label>
+            <input type="text" class="form-control" id="code" placeholder="home">
+            <div class="clip"><p>KOD <span>-10%</span></p></div>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+            <label class="custom-control-label" for="customControlAutosizing">TAK, chcę być informowany/a e-mailowo o wydarzeniach, materiałach, promocjach i ofertach specjalnych... <span>rozwiń pozostałą treść</span></label>
           </div>
           <button type="submit" class="btn btn-block">Zaloguj się</button>
         </form>

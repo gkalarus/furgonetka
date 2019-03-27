@@ -207,12 +207,15 @@
 
   .form {
     margin-top: 70px;
+    margin-bottom: 70px;
     width: 85%;
-    height: 610px;
+    padding: 35px;
     color: $black;
     background-color: $white;
     border-radius: 5px;
-
+    &>h3 {
+      font-weight: $bold-weight;
+    }
     @include media-breakpoint-up(md) {
       width: 664px;
 
@@ -227,13 +230,102 @@
       margin-left: 50px;
       width: 500px;
 
+    } 
+    
+
+    input {
+      padding: 24px;
+      &::placeholder {
+        font-size: 10px;
+        @include media-breakpoint-up(sm) {
+          font-size: 14px;
+        }
+      }
     }
+
+    input[type=text] {
+      &::placeholder {
+        text-transform: uppercase;
+        color: $blue-placeholder;
+        font-weight: $bold-weight;
+      }
+    }
+
+    .form-group {
+      margin-bottom: 27px;
+    }
+
+
+
+    .inputEmail, .inputCode {
+      position: relative;
+      label {
+        position: absolute;
+        background-color: $white;
+        color: $grey;
+        font-size: 8px;
+        top: -6px;
+        left: 18px;
+        padding: 0 5px;
+        @include media-breakpoint-up(sm) {
+          top: -9px;
+          font-size: 12px;
+        }
+      }
+
+      .clip {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 13px;
+        width: 70px;
+        height: 24px;
+        background-color: $lightblue-placeholder;
+        color: $blue-placeholder;
+        clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 20% 50%);
+        @include media-breakpoint-up(sm) {
+          width: 122px;
+          height: 24px;
+        }
+        p {
+          position: absolute;
+          top: 50%;
+          left: 33px;
+          transform: translateY(-50%);
+          font-size: 9px;
+          @include media-breakpoint-up(sm) {
+            font-size: 16px;
+          }
+          span {
+            left: 38px;
+            font-weight: $bold-weight;
+          }
+        }
+      }
+    }
+
+    .custom-checkbox {
+      .custom-control-label {
+        font-size: 15px;
+      }
+      .custom-control-label::before {
+        border-radius: 0;
+      }
+      span {
+        color: $light-blue;
+      }
+    }
+
+
+
 
     button {
       border: none;
       color: $black;
       font-weight: $bold-weight;
       background-color: $yellow-btn;
+      padding: 15px;
+      margin-top: 20px;
     }
   }
 
